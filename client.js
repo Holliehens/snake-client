@@ -10,11 +10,27 @@ const connect = function () {
   conn.setEncoding("utf8");
   conn.on("connect", () => { 
     console.log("Successfully connected to game server" );
-    conn.write("Name: HAH" );
+    conn.write("Name: HAH");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 500);
+    // setInterval(() => {
+    //   conn.write("Move: right");
+    // }, 500);
+    // setInterval(() => {
+    //   conn.write("Move: down");
+    // }, 500);
+    // setInterval(() => {
+    //   conn.write("Move: left");
+    // }, 500);
+    
+
+    
     // code that does something when the connection is first established
   });
   conn.on("data", (data) => {
-  console.log(data.toString());
+    console.log(data);
+    conn.destroy();
   });
 
 
