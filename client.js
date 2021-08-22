@@ -8,7 +8,9 @@ const connect = function () {
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  conn.on("connect", () => {
+  conn.on("connect", () => { 
+    console.log("Successfully connected to game server" );
+    conn.write("Name: HAH" );
     // code that does something when the connection is first established
   });
   conn.on("data", (data) => {
