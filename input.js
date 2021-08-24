@@ -28,6 +28,15 @@ const setupInput = function(conn) {
     conn.write('Move: right');
     console.log("HUNGRY!!");
     }
+    if (key === 'h') {
+      conn.write('Say: HAM');
+    }
+    if (key === 'z') {
+      conn.write('Say: WIN');
+    }
+    if (key === 'x') {
+      conn.write('Say: FUN');
+    }
 
   }
   process.stdin.on('data', handleUserInput);
